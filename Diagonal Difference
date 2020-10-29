@@ -1,0 +1,16 @@
+#!/bin/python3
+
+def diagonalDifference(n, arr):
+    sumleft = 0
+    sumright = 0
+    sumleft = arr[0][0]+arr[1][1]+arr[2][2]
+    sumright = arr[0][2]+arr[1][1]+arr[2][0]
+    return abs(sumleft-sumright)
+
+if __name__ == '__main__':
+    n = int(input().strip())
+    arr = []
+    for _ in range(n):
+        arr.append(list(map(int, input().rstrip().split())))
+    result = diagonalDifference(n, arr)
+    print(result)
