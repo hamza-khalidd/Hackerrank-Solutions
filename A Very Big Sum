@@ -1,0 +1,11 @@
+def aVeryBigSum(ar_count,ar):
+    summ = 0
+    for i in range(ar_count):
+        summ = ar[i]+summ
+    return summ
+
+if __name__ == '__main__':
+    ar_count = int(input())
+    ar = list(map(int, input().rstrip().split()))
+    result = aVeryBigSum(ar_count,ar)
+    print(result)
