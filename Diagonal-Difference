@@ -1,0 +1,21 @@
+#!/bin/python3
+
+import math
+
+def diagonalDifference(nums):
+    diagonal1 = 0
+    diagonal2 = 0
+    for i in range(len(nums)):
+        diagonal1+= nums[i][i]
+        diagonal2+= nums[i][len(nums)-i-1]
+    return (abs(diagonal1- diagonal2))
+
+if __name__ == '__main__':
+    n = int(input().strip())
+    arr = []
+    for _ in range(n):
+        arr.append(list(map(int, input().rstrip().split())))
+    
+    result = diagonalDifference(arr)
+
+    print(result)
