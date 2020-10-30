@@ -1,0 +1,18 @@
+#!/bin/python3
+
+import math
+
+def birthdayCakeCandles(candles):
+    count = 0
+    tallestcandle = max(candles)
+    for i in range(len(candles)):
+        if candles[i] == tallestcandle:
+            count+=1
+    return count
+
+if __name__ == '__main__':
+    candles_count = int(input().strip())
+    candles = list(map(int, input().rstrip().split()))
+    result = birthdayCakeCandles(candles)
+
+    print(result)
